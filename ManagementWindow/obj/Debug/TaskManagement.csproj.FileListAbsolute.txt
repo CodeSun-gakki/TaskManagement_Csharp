@@ -2,10 +2,11 @@ E:\VS2019_workspace\TaskManagement\ManagementWindow\bin\Debug\ManagementWindow.e
 E:\VS2019_workspace\TaskManagement\ManagementWindow\bin\Debug\ManagementWindow.exe
 E:\VS2019_workspace\TaskManagement\ManagementWindow\bin\Debug\ManagementWindow.pdb
 E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\TaskManagement.csprojAssemblyReference.cache
-E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\ManagementWindow.TaskManageWindow.resources
 E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\ManagementWindow.Properties.Resources.resources
 E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\TaskManagement.csproj.GenerateResource.cache
 E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\ManagementWindow.exe.licenses
 E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\TaskManagement.csproj.CoreCompileInputs.cache
 E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\ManagementWindow.exe
 E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\ManagementWindow.pdb
+E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\ManagementWindow.TaskManagementWindow.resources
+E:\VS2019_workspace\TaskManagement\ManagementWindow\obj\Debug\ManagementWindow.TaskSettingWindow.resources

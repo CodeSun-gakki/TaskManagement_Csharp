@@ -14,7 +14,18 @@ namespace ManagementWindow
     {
         public TaskManagementWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+        }
+
+        private void TaskCreatetBtn_Click(object sender, EventArgs e)
+        {
+            TaskSettingWindow taskSettingWindow = new TaskSettingWindow();
+            taskSettingWindow.Show();
+        }
+
+        private void TaskManagementWindow_Load(object sender, EventArgs e)
+        {
+            this.TaskInfoGrid.ClearSelection();
         }
     }
 }
