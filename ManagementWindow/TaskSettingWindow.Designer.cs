@@ -37,9 +37,10 @@
             this.AppIconList = new System.Windows.Forms.ImageList(this.components);
             this.PathSelectedBtn = new System.Windows.Forms.Button();
             this.PathSelectedLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.APKPathText = new System.Windows.Forms.TextBox();
             this.TaskStartBtn = new System.Windows.Forms.Button();
             this.TaskCanceledBtn = new System.Windows.Forms.Button();
+            this.APKPathDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // AppListView
@@ -70,6 +71,7 @@
             this.PathSelectedBtn.TabIndex = 1;
             this.PathSelectedBtn.Text = "选择路径";
             this.PathSelectedBtn.UseVisualStyleBackColor = true;
+            this.PathSelectedBtn.Click += new System.EventHandler(this.PathSelectedBtn_Click);
             // 
             // PathSelectedLabel
             // 
@@ -80,12 +82,12 @@
             this.PathSelectedLabel.TabIndex = 2;
             this.PathSelectedLabel.Text = "APK路径";
             // 
-            // textBox1
+            // APKPathText
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 334);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(597, 21);
-            this.textBox1.TabIndex = 3;
+            this.APKPathText.Location = new System.Drawing.Point(66, 334);
+            this.APKPathText.Name = "APKPathText";
+            this.APKPathText.Size = new System.Drawing.Size(597, 21);
+            this.APKPathText.TabIndex = 3;
             // 
             // TaskStartBtn
             // 
@@ -95,6 +97,7 @@
             this.TaskStartBtn.TabIndex = 4;
             this.TaskStartBtn.Text = "开始执行";
             this.TaskStartBtn.UseVisualStyleBackColor = true;
+            this.TaskStartBtn.Click += new System.EventHandler(this.TaskStartBtn_Click);
             // 
             // TaskCanceledBtn
             // 
@@ -104,6 +107,11 @@
             this.TaskCanceledBtn.TabIndex = 5;
             this.TaskCanceledBtn.Text = "取消";
             this.TaskCanceledBtn.UseVisualStyleBackColor = true;
+            this.TaskCanceledBtn.Click += new System.EventHandler(this.TaskCanceledBtn_Click);
+            // 
+            // APKPathDialog
+            // 
+            this.APKPathDialog.FileName = "APKPathDialog";
             // 
             // TaskSettingWindow
             // 
@@ -112,12 +120,13 @@
             this.ClientSize = new System.Drawing.Size(749, 410);
             this.Controls.Add(this.TaskCanceledBtn);
             this.Controls.Add(this.TaskStartBtn);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.APKPathText);
             this.Controls.Add(this.PathSelectedLabel);
             this.Controls.Add(this.PathSelectedBtn);
             this.Controls.Add(this.AppListView);
             this.Name = "TaskSettingWindow";
             this.Text = "任务设置";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TaskSettingWindow_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,8 +138,9 @@
         private System.Windows.Forms.ImageList AppIconList;
         private System.Windows.Forms.Button PathSelectedBtn;
         private System.Windows.Forms.Label PathSelectedLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox APKPathText;
         private System.Windows.Forms.Button TaskStartBtn;
         private System.Windows.Forms.Button TaskCanceledBtn;
+        private System.Windows.Forms.OpenFileDialog APKPathDialog;
     }
 }

@@ -16,5 +16,28 @@ namespace ManagementWindow
         {
             InitializeComponent();
         }
+
+        private void PathSelectedBtn_Click(object sender, EventArgs e)
+        {
+            this.APKPathDialog.ShowDialog();
+            this.APKPathDialog.Dispose();
+            this.APKPathText.Text = this.APKPathDialog.FileName;
+            
+        }
+
+        private void TaskStartBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TaskCanceledBtn_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void TaskSettingWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

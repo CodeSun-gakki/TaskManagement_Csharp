@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TaskInfoGrid = new System.Windows.Forms.DataGridView();
             this.TaskCreatetBtn = new System.Windows.Forms.Button();
             this.TaskDeleteBtn = new System.Windows.Forms.Button();
             this.APPName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,24 +36,25 @@
             this.DataSource = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TaskProgress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskInfoGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // TaskInfoGrid
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TaskInfoGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TaskInfoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TaskInfoGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.APPName,
             this.deviceName,
             this.DataSource,
             this.CreateTime,
             this.TaskProgress});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1036, 578);
-            this.dataGridView1.TabIndex = 0;
+            this.TaskInfoGrid.Location = new System.Drawing.Point(1, 0);
+            this.TaskInfoGrid.Name = "TaskInfoGrid";
+            this.TaskInfoGrid.RowTemplate.Height = 23;
+            this.TaskInfoGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TaskInfoGrid.Size = new System.Drawing.Size(1036, 578);
+            this.TaskInfoGrid.TabIndex = 0;
             // 
             // TaskCreatetBtn
             // 
@@ -64,6 +65,7 @@
             this.TaskCreatetBtn.TabIndex = 1;
             this.TaskCreatetBtn.Text = "创建任务";
             this.TaskCreatetBtn.UseVisualStyleBackColor = true;
+            this.TaskCreatetBtn.Click += new System.EventHandler(this.TaskCreatetBtn_Click);
             // 
             // TaskDeleteBtn
             // 
@@ -79,26 +81,31 @@
             // 
             this.APPName.HeaderText = "APP名称";
             this.APPName.Name = "APPName";
+            this.APPName.ReadOnly = true;
             // 
             // deviceName
             // 
             this.deviceName.HeaderText = "设备名称";
             this.deviceName.Name = "deviceName";
+            this.deviceName.ReadOnly = true;
             // 
             // DataSource
             // 
             this.DataSource.HeaderText = "数据源";
             this.DataSource.Name = "DataSource";
+            this.DataSource.ReadOnly = true;
             // 
             // CreateTime
             // 
             this.CreateTime.HeaderText = "创建时间";
             this.CreateTime.Name = "CreateTime";
+            this.CreateTime.ReadOnly = true;
             // 
             // TaskProgress
             // 
             this.TaskProgress.HeaderText = "任务进度";
             this.TaskProgress.Name = "TaskProgress";
+            this.TaskProgress.ReadOnly = true;
             // 
             // TaskManagementWindow
             // 
@@ -107,17 +114,20 @@
             this.ClientSize = new System.Drawing.Size(1037, 624);
             this.Controls.Add(this.TaskDeleteBtn);
             this.Controls.Add(this.TaskCreatetBtn);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TaskInfoGrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "TaskManagementWindow";
             this.Text = "任务管理";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.TaskManagementWindow_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TaskInfoGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TaskInfoGrid;
         private System.Windows.Forms.Button TaskCreatetBtn;
         private System.Windows.Forms.Button TaskDeleteBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn APPName;
